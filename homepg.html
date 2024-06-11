@@ -1,63 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Custom Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .container {
+            background-color: #f0f0f0;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 20px;
-            border-radius: 10px;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
         }
-        p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto;
+        header h1 {
+            margin: 0;
+            font-size: 2em;
         }
-        a {
-            color: #333;
+        nav {
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
             text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
         }
-        a:hover {
-            color: #555;
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Welcome to My Homepage</h1>
-        <p>This is a minimalist custom homepage with a dynamic background. Click <a href="#">here</a> to learn more.</p>
-    </div>
-    <script>
-        var images = [
-            'https://images.unsplash.com/photo-1717764873047-aed4cb59c7e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8',
-            'https://images.unsplash.com/photo-1715329499438-90d5632dbcf3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D',
-            'https://images.unsplash.com/photo-1717857253793-f3167d060f7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D',
-            'https://images.unsplash.com/photo-1717501220725-83f151c447e7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2N3x8fGVufDB8fHx8fA%3D%3D',
-            'https://images.unsplash.com/photo-1715157163446-91abdd457a97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D'
-        ];
-        var index = 0;
-        setInterval(function() {
-            document.body.style.backgroundImage = 'url(' + images[index] + ')';
-            index = (index + 1) % images.length;
-        }, 5000); // change image every 5 seconds
-    </script>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tristique nunc, at euismod ipsum.</p>
+    </section>
+
+    <section>
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tristique nunc, at euismod ipsum.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Homepage. All rights reserved.</p>
+    </footer>
 </body>
 </html>
