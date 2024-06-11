@@ -1,63 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Custom Homepage</title>
+    <title>My Personal Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            background-color: #f0f0f0;
+            color: #333;
         }
         .container {
+            width: 80%;
+            margin: 0 auto;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 20px;
-            border-radius: 10px;
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            margin-top: 50px;
+            font-size: 2em;
         }
         p {
             font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        a {
-            color: #333;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #555;
+            line-height: 1.6;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Homepage</h1>
-        <p>This is a minimalist custom homepage with a dynamic background. Click <a href="#">here</a> to learn more.</p>
+        <h1>Welcome to My Personal Page</h1>
+        <p>Hello! I'm [Your Name]. I'm a student at the Government College of Engineering Aurangabad, pursuing a B.Tech degree in Electrical, Electronics, and Power. Welcome to my personal page!</p>
+        <p>Here, you'll find updates about my projects, studies, and other interests. Stay tuned!</p>
     </div>
-    <script>
-        var images = [
-            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/1609949120593-SR33OQ98GHX250UW5PLY/18.jpg?format=500w',
-            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/87d71b1a-d458-4c2d-bbd4-9ce33c9020f6/Outer+Wilds?format=1000w',
-            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/df22314b-d845-43dd-8f74-66f556fd759f/Dome+4k?format=1000w',
-            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/0fdca1bd-3a48-4c76-96ff-baa6a70f355f/Real+time+Persona+5+Tokyo+Transition?format=1000w',
-            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/b21fb4c1-d5d5-4bb4-a0f9-cc948e94471c/Pok%C3%A9mon+Emerald?format=1000w'
-        ];
-        var index = 0;
-        setInterval(function() {
-            document.body.style.backgroundImage = 'url(' + images[index] + ')';
-            index = (index + 1) % images.length;
-        }, 5000); // change image every 5 seconds
-    </script>
 </body>
 </html>
