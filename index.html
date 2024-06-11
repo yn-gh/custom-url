@@ -53,7 +53,17 @@
             'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/0fdca1bd-3a48-4c76-96ff-baa6a70f355f/Real+time+Persona+5+Tokyo+Transition?format=1000w',
             'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/b21fb4c1-d5d5-4bb4-a0f9-cc948e94471c/Pok%C3%A9mon+Emerald?format=1000w'
         ];
+
         var index = 0;
+
+        // Preload images
+        var preloadedImages = [];
+        images.forEach(function(src) {
+            var img = new Image();
+            img.src = src;
+            preloadedImages.push(img);
+        });
+
         setInterval(function() {
             document.body.style.backgroundImage = 'url(' + images[index] + ')';
             index = (index + 1) % images.length;
