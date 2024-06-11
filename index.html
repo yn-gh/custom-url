@@ -1,82 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
+    <title>Your Custom Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
             text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        section {
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
+            border-radius: 10px;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Welcome to My Homepage</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tristique nunc, at euismod ipsum.</p>
-    </section>
-
-    <section>
-        <h2>Our Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tristique nunc, at euismod ipsum.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Homepage. All rights reserved.</p>
-    </footer>
+        <p>This is a minimalist custom homepage with a dynamic background. Click <a href="#">here</a> to learn more.</p>
+    </div>
+    <script>
+        var images = [
+            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/1609949120593-SR33OQ98GHX250UW5PLY/18.jpg?format=500w',
+            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/87d71b1a-d458-4c2d-bbd4-9ce33c9020f6/Outer+Wilds?format=1000w',
+            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/df22314b-d845-43dd-8f74-66f556fd759f/Dome+4k?format=1000w',
+            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/0fdca1bd-3a48-4c76-96ff-baa6a70f355f/Real+time+Persona+5+Tokyo+Transition?format=1000w',
+            'https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/b21fb4c1-d5d5-4bb4-a0f9-cc948e94471c/Pok%C3%A9mon+Emerald?format=1000w'
+        ];
+        var index = 0;
+        setInterval(function() {
+            document.body.style.backgroundImage = 'url(' + images[index] + ')';
+            index = (index + 1) % images.length;
+        }, 5000); // change image every 5 seconds
+    </script>
 </body>
 </html>
